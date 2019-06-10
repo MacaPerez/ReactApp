@@ -1,6 +1,72 @@
-.maca {
-  background: red;
-  .maca2 {
-    color: white;
-  }
-}
+/**
+* CONTENTS
+*
+* VARIABLES
+* Global...............Globally-available variables.
+* Boostrap...............Custom boostrap variables.
+*
+* GENERIC, COMMON STYLES
+* Body ........Margin and main font declaration.
+*
+* COMPONENTS
+* Navigation bar............Custom navigation bar styles.
+* Footer..............Custom footer styles.
+* Grid cards............Minimal artist grid and cards.
+*
+*/
+
+
+
+
+/*------------------------------------*\
+  #VARIABLES
+\*------------------------------------*/
+
+/**
+ * Import variables
+ */
+
+
+@import "variables";
+
+/**
+ * Import global styles
+ */
+
+
+@import "global";
+
+
+/*------------------------------------*\
+  #COMMON STYLES
+\*------------------------------------*/
+
+/**
+ * Import common styles from partial file
+ */
+
+
+
+
+
+
+
+/*------------------------------------*\
+  #COMPONENTS
+\*------------------------------------*/
+
+/**
+ * Import post styles from partial file
+ */
+
+@import "components/navbar";
+
+/**
+ * Import artist grid and cards from partial file
+ */
+
+
+
+/**
+ * Import carousel from partial file
+ */

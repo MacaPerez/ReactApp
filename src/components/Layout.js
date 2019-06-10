@@ -1,14 +1,15 @@
 import React from "react"
 import Navbar from "./Navbar"
+import Footer from "./Footer"
 
 const Layout = props => {
   return(
-    <>  
+    <>
       <Navbar/>
-      <main>
+      <main className="mainContent">
         {props.children}
       </main>
-      <div className="footer">Macarena</div>
+      <Footer/>
     </>
   )
 }

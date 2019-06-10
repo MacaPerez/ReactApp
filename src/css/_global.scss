@@ -1,0 +1,19 @@
+// Fuente
+
+body {
+  font-family: $font-family-sans-serif;
+}
+
+.mainContent {
+  height: 100vh;
+}
+
+// Formularios
+
+.form-control {
+    padding: .5rem .75rem;
+    border: none;
+    border-bottom: 2px solid;
+    border-radius: 0;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}

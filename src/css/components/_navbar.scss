@@ -1,0 +1,82 @@
+// Orden de los elementos del navbar
+
+.navbar {
+  background: rgb(91,209,215);
+  background: radial-gradient(circle, rgba(91,209,215,1) 18%, rgba(10,169,211,1) 100%);
+}
+
+.navbar-brand {
+  order: 1;
+  margin-left: 2.1em;
+
+  @media screen and (max-width: $break-medium) {
+    margin-left: .5em;
+  }
+}
+
+.logo {
+  width: 10rem;
+  @media screen and (max-width: $break-small) {
+    display: none;
+  }
+}
+
+
+.imago {
+  width: 2.5rem;
+  display: none;
+  @media screen and (max-width: $break-small) {
+    display: block;
+  }
+}
+
+.nav-item {
+  padding-left: 2em;
+
+  @media screen and (max-width: $break-medium) {
+    padding-left: .5em;
+  }
+}
+
+.nav-link__custom {
+  padding-top: 1.1em;
+  color: #fff!important;
+  font-weight: 500;
+}
+
+.nav-link__custom:hover {
+  color: $info!important;
+}
+
+.navbar-collapse {
+  order: 2;
+}
+
+.navbar-light .navbar-toggler {
+  color: white;
+  border-color: rgba(0,0,0,0);
+}
+
+.customToggler {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")!important;
+}
+
+.navBar__SearchForm {
+  order: 3;
+  flex: 1;
+  justify-content: end;
+}
+
+.navBar__SearchInput {
+    color: $dark;
+    background-color: #fff0;
+    border-bottom: 2px solid #fff;
+}
+
+.navBar__SearchInput:focus {
+    color: $info;
+    background-color: #ffffff4d;
+    border: none;
+    outline: 0;
+    box-shadow: 0 0 0 1px #fff;
+}
