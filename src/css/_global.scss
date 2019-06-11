@@ -4,8 +4,40 @@ body {
   font-family: $font-family-sans-serif;
 }
 
+.emoji {
+  font-size: 1.5em;
+}
+
+// Tamaños de letra
+
+.display6 {
+  font-size: 1.1em;
+}
+
+.display9 {
+  font-size: 1.3em;
+}
+
+.display10 {
+  font-size: 1.4em;
+}
+
+.display-less-1 {
+  font-size: .75em;
+}
+
+
+// Grid listado
+
 .mainContent {
-  height: 100vh;
+  min-height: 100vh;
+  margin: 2em 0;
+}
+
+.gridContainer {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
 // Formularios

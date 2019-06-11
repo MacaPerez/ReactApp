@@ -1,19 +1,24 @@
 /**
 * CONTENTS
 *
+*
 * VARIABLES
-* Global...............Globally-available variables.
-* Boostrap...............Custom boostrap variables.
+* Custom Boostrap...............Custom boostrap variables.
+*
+* BOOSTRAP
+* Import boostrap css
 *
 * GENERIC, COMMON STYLES
-* Body ........Margin and main font declaration.
+* Global...............Globally-available styles and variables.
 *
 * COMPONENTS
 * Navigation bar............Custom navigation bar styles.
 * Footer..............Custom footer styles.
-* Grid cards............Minimal artist grid and cards.
+* Film cards............Minimal cards.
 *
 */
+
+
 
 
 
@@ -29,12 +34,20 @@
 
 @import "variables";
 
+
+
+
+/*------------------------------------*\
+  #BOOSTRAP
+\*------------------------------------*/
+
 /**
- * Import global styles
+ * Import boostrap css
  */
 
 
-@import "global";
+@import "~bootstrap/scss/bootstrap.scss";
+
 
 
 /*------------------------------------*\
@@ -42,11 +55,11 @@
 \*------------------------------------*/
 
 /**
- * Import common styles from partial file
+ * Import global styles
  */
 
 
-
+@import "global";
 
 
 
@@ -65,7 +78,7 @@
  * Import artist grid and cards from partial file
  */
 
-
+@import "components/filmcard";
 
 /**
  * Import carousel from partial file

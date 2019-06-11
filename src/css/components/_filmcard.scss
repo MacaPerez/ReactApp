@@ -1,0 +1,51 @@
+// Columna de información
+
+.infoCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+
+  @media screen and (max-width: $break-small) {
+    max-width: 300px;
+    margin: auto;
+  }
+}
+
+
+
+.shortDescription {
+    display: block;
+    display: -webkit-box;
+    height: 4rem;
+    margin: 0 auto;
+    line-height: 1.4;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cardLink-box {
+  text-align: center;
+  padding: 5px;
+  border-top: 1px solid $secondary;
+  border-bottom: 1px solid $secondary;
+
+  @media screen and (max-width: $break-medium) {
+    margin-top: 1.5em;
+  }
+}
+
+.card-link {
+  color: $secondary;
+}
+
+.cardLink-title {
+  color: $dark!important;
+}
+
+.cardLink-title:hover {
+  text-decoration: none;
+  color: $info!important;
+}
