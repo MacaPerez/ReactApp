@@ -28,7 +28,6 @@
 
 .cardLink-box {
   text-align: center;
-  padding: 5px;
   border-top: 1px solid $secondary;
   border-bottom: 1px solid $secondary;
 
@@ -38,9 +37,12 @@
 }
 
 
-
 .card-link {
   color: $secondary;
+}
+
+.noBorder:focus {
+  box-shadow: none;
 }
 
 .cardLink-title {

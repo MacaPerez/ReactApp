@@ -3,6 +3,7 @@ import Navbar from "./Navbar"
 import Header from "./Header"
 import Footer from "./Footer"
 import Filmcard from "./Filmcard"
+import Details from "./Details"
 
 const Layout = props => {
   return(
@@ -24,6 +25,7 @@ const Layout = props => {
           <Filmcard/>
           <Filmcard/>
           <Filmcard/>
+          <Details/>
         </div>
       </main>
       <Footer/>
