@@ -15,6 +15,7 @@
 * Navigation bar............Custom navigation bar styles.
 * Footer..............Custom footer styles.
 * Film cards............Minimal cards.
+* Details pop-up........Product details modal.
 *
 */
 
@@ -49,7 +50,6 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
 
-
 /*------------------------------------*\
   #COMMON STYLES
 \*------------------------------------*/
@@ -69,17 +69,20 @@
 \*------------------------------------*/
 
 /**
- * Import post styles from partial file
+ * Import nav styles from partial file
  */
 
 @import "components/navbar";
 
 /**
- * Import artist grid and cards from partial file
+ * Import grid and cards from partial file
  */
 
 @import "components/filmcard";
 
 /**
- * Import carousel from partial file
+ * Import details pop-up styles from partial file
  */
+
+
+@import "components/details";

@@ -74,9 +74,13 @@
 }
 
 .navBar__SearchInput:focus {
-    color: $info;
+    color: $dark;
     background-color: #ffffff4d;
     border: none;
     outline: 0;
     box-shadow: 0 0 0 1px #fff;
+}
+
+.navBar__SearchInput::placeholder {
+  color: white;
 }

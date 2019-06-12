@@ -37,6 +37,8 @@
   }
 }
 
+
+
 .card-link {
   color: $secondary;
 }
@@ -48,4 +50,9 @@
 .cardLink-title:hover {
   text-decoration: none;
   color: $info!important;
+}
+
+.filmImage:hover {
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.25);
+  border-radius: 0.25rem;
 }

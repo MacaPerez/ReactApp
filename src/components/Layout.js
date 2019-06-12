@@ -21,6 +21,9 @@ const Layout = props => {
           <Filmcard/>
           <Filmcard/>
           <Filmcard/>
+          <Filmcard/>
+          <Filmcard/>
+          <Filmcard/>
         </div>
       </main>
       <Footer/>

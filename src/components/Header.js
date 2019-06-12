@@ -6,7 +6,7 @@ const Header = props => {
       <h1 className="display10">At blandit non cursus sociis venenatis</h1>
       <p>At blandit non cursus sociis venenatis</p>
       <p className="emoji">🎞️ 🍿 🤓</p>
-      <h2 className="text-left text-info display9 ml-lg-3 mb-3">Estas son alguna de las películas mejor valoradas..</h2>
+      <h2 className="text-left text-info display9 ml-lg-3 mb-4">Estas son alguna de las películas mejor valoradas..</h2>
     </header>
 
   )
