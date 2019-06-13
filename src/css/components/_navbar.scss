@@ -1,9 +1,5 @@
 // Orden de los elementos del navbar
 
-.navbar {
-  background: rgb(91,209,215);
-  background: radial-gradient(circle, rgba(91,209,215,1) 18%, rgba(10,169,211,1) 100%);
-}
 
 .navbar-brand {
   order: 1;
@@ -45,7 +41,7 @@
 }
 
 .nav-link__custom:hover {
-  color: $info!important;
+  color: $dark!important;
 }
 
 .navbar-collapse {

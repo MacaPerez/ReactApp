@@ -2,7 +2,7 @@ import React from "react"
 
 const Navbar = props => {
   return (
-<nav className="navbar navbar-expand-md navbar-light bg-light">
+<nav className="navbar navbar-expand-md navbar-light bgCustom">
 
   <a className="navbar-brand" href="index.html" title="ir a la home">
   <img className="logo" src={process.env.PUBLIC_URL + 'static/img/logo2.png'} alt="Ir a la home. Logotipo caja de palomitas y texto UOC Flix"/>
