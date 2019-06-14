@@ -7,7 +7,7 @@ const Routes = props => {
   return (
     <>
       <Route  path="/" exact component={Home} />
-      <Route  path="/film-detail" exact component={Details} />
+      <Route  path="/film-detail/:id" exact component={Details} />
     </>
   )
 }

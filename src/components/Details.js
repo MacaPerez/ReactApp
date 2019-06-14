@@ -1,7 +1,80 @@
 import React from "react"
 import {Link} from "react-router-dom"
 
-const Details = props => {
+class Details extends React.Component {
+
+constructor(){
+  super()
+  this.state = {
+      details: {
+        genres: [],
+        title: "Movie title",
+        vote_average: 0,
+    },
+     images: []
+  }
+}
+
+componentDidMount(){
+  this.getFilmData()
+  this.getImageGallery()
+}
+
+getFilmData(){
+  fetch("https://api.themoviedb.org/3/movie/" + this.props.match.params.id +"?api_key=78d69b586b6f55809f16884ff99f42c1&language=es")
+  .then((response) => {
+    return response.json()
+  })
+  .then((data) => {
+    this.setState({
+      details: data
+    })
+  })
+}
+
+getImageGallery(){
+  fetch("https://api.themoviedb.org/3/movie/" + this.props.match.params.id +"/images?api_key=78d69b586b6f55809f16884ff99f42c1&language=es")
+  .then((response) => {
+    return response.json()
+  })
+  .then((data) => {
+    console.log(data)
+    this.setState({
+      images: [
+        ...data.backdrops,
+        ...data.posters,
+      ]
+    })
+  })
+}
+
+renderGenres(){
+    return this.state.details.genres.map((genre) => {
+      return <span className="badge badge-pill badge-info">{genre.name}</span>
+    })
+}
+
+renderImages(){
+
+  return this.state.images.map((image, index) => {
+    const url = "https://image.tmdb.org/t/p/w500" + image.file_path
+    console.log(url)
+    const film = this.state.details
+    const alt = film.title + (index + 1)
+    return <img src={url}
+    alt={alt}
+    className="imgG"/>
+
+  })
+}
+
+render(){
+  const film = this.state.details
+  const imgPath = "https://image.tmdb.org/t/p/w500" + film.poster_path
+  const altText = "Imagen de portada de " + film.title
+  const score = film.vote_average * 10 + "%"
+
+
   return (
     <>
 
@@ -16,23 +89,18 @@ const Details = props => {
     <main className="container">
         <div className="row">
             <div className="col mt-4">
-                <h1 className="text-dark">Film Title</h1>
+                <h1 className="text-dark">{film.title}</h1>
             </div>
         </div>
         <div className="row">
             <div className="col-6 col-sm-4 col-md-4 col-lg-2 mt-3">
-                <img src="https://picsum.photos/200/300" alt="img" className="img-fluid"/>
+                <img src={imgPath} alt={altText} className="img-fluid"/>
             </div>
             <div className="col-6 col-sm-8 col-md-2 mt-3">
                 <h2 className="fSize--smaller">Score:</h2>
-                <span className="badge badge-pill badge-danger">85%</span>
+                <span className="badge badge-pill badge-danger">{score}</span>
                 <h2 className="pt-3 fSize--smaller">Géneros:</h2>
-                <span className="badge badge-pill badge-info">Drama</span>
-                <span className="badge badge-pill badge-info">Comedia</span>
-                <span className="badge badge-pill badge-info">Terror</span>
-                <span className="badge badge-pill badge-info">Otro</span>
-                <span className="badge badge-pill badge-info">Otro</span>
-                <span className="badge badge-pill badge-info">Otro</span>
+                {this.renderGenres()}
             </div>
             <div className="col-12 col-md-6 col-lg-8 mt-3 mx-auto">
                 <ul className="nav nav-tabs" id="myTab" role="tablist">
@@ -46,27 +114,13 @@ const Details = props => {
                 <div className="tab-content" id="myTabContent">
                     <div className="tab-pane fade show active" id="informacion-detallada" role="tabpanel" aria-labelledby="informacion-detallada-tab">
                         <div className="mt-4">
-                            <p className="review">Lorem ipsum dolor sit amet consectetur adipiscing elit, platea mauris tempus litora netus congue torquent massa, nisi maecenas in vitae facilisi eros. Phasellus in nisi fusce nulla senectus potenti
-                                vehicula, ornare
-                                facilisis habitant cum className id massa, ridiculus ultricies quis tellus fringilla mus. Vitae commodo lectus accumsan ultrices ut diam magna sed, sem turpis facilisi natoque lacinia ridiculus curabitur pharetra,
-                                parturient
-                                dapibus habitant tellus penatibus lobortis luctus.</p>
-                            <p className="review">Lorem ipsum dolor sit amet consectetur adipiscing elit, platea mauris tempus litora netus congue torquent massa, nisi maecenas in vitae facilisi eros. Phasellus in nisi fusce nulla senectus potenti
-                                vehicula, ornare
-                                facilisis habitant cum className id massa, ridiculus ultricies quis tellus fringilla mus. Vitae commodo lectus accumsan ultrices ut diam magna sed, sem turpis facilisi natoque lacinia ridiculus curabitur pharetra,
-                                parturient
-                                dapibus habitant tellus penatibus lobortis luctus.</p>
+                            <p className="review">{film.overview}</p>
+
                         </div>
                     </div>
                     <div className="tab-pane fade" id="imagenes" role="tabpanel" aria-labelledby="imagenes-tab">
                         <div className="scrolling-wrapper-flexbox">
-                            <img src="https://picsum.photos/237/200" alt="san francisco" className="imgG"/>
-                            <img src="https://picsum.photos/133/200" alt="san francisco" className="imgG"/>
-                            <img src="https://picsum.photos/421/200" alt="san francisco" className="imgG"/>
-                            <img src="https://picsum.photos/234/200" alt="san francisco" className="imgG"/>
-                            <img src="https://picsum.photos/124/200" alt="san francisco" className="imgG"/>
-                            <img src="https://picsum.photos/222/200" alt="san francisco" className="imgG"/>
-                            <img src="https://picsum.photos/325/200" alt="san francisco" className="imgG"/>
+                          {this.renderImages()}
                         </div>
                     </div>
                 </div>
@@ -77,6 +131,10 @@ const Details = props => {
     </>
 
   )
+  }
+
 }
+
+
 
 export default Details

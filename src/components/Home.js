@@ -2,7 +2,6 @@ import React from 'react'
 import Navbar from "./Navbar"
 import Header from "./Header"
 import Filmcard from "./Filmcard"
-import axios from "axios"
 
 class Home extends React.Component {
 
@@ -35,7 +34,6 @@ render(){
           <div className="container gridContainer">
             {
               this.state.films.map((film) => {
-                console.log(film)
                 const imgPath = "https://image.tmdb.org/t/p/w500" + film.poster_path
                 const altText = "Imagen de portada de " + film.title
                 const urlDetail = "/film-detail/" + film.id
