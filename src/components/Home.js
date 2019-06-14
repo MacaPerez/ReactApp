@@ -37,7 +37,17 @@ render(){
               this.state.films.map((film) => {
                 console.log(film)
                 const imgPath = "https://image.tmdb.org/t/p/w500" + film.poster_path
-                return <Filmcard title={film.title} description={film.overview} mainImage={imgPath} id={film.id}/>
+                const altText = "Imagen de portada de " + film.title
+                const urlDetail = "/film-detail/" + film.id
+                return <Filmcard
+                title={film.title}
+                description={film.overview}
+                mainImage={imgPath}
+                id={film.id}
+                alt={altText}
+                url={urlDetail}
+                />
+
               })
             }
           </div>
