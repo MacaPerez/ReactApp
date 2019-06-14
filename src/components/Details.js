@@ -1,4 +1,5 @@
 import React from "react"
+import {Link} from "react-router-dom"
 
 const Details = props => {
   return (
@@ -6,7 +7,9 @@ const Details = props => {
 
     <nav className="nav p6 bgCustom">
         <span className="nav-item">
-            <a className="nav-link active text-white" href="#" title="volver a la página anterior"><i className="fa fa-arrow-left mr-3"></i>Volver</a>
+            <Link to="/" className="nav-link active text-white" title="volver a la página anterior">
+              <i className="fa fa-arrow-left mr-3"></i>Volver
+            </Link>
         </span>
     </nav>
 
