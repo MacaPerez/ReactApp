@@ -1,12 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
 import Layout from  './components/Layout'
 import './css/main.scss';
+import { BrowserRouter } from 'react-router-dom'
+import Routes from './Routes'
 
 function App() {
   return (
-    <Layout className="App maca" maca="maca">
-    </Layout>
+    <BrowserRouter>
+      <Layout>
+        <Routes/>
+      </Layout>
+    </BrowserRouter>
   );
 }
 

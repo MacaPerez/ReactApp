@@ -1,35 +1,14 @@
 import React from "react"
-import Navbar from "./Navbar"
-import Header from "./Header"
+import Home from "./Home"
 import Footer from "./Footer"
-import Filmcard from "./Filmcard"
 import Details from "./Details"
 
 const Layout = props => {
   return(
-    <>
-      <Navbar/>
-      <main className="mainContent">
-      <Header/>
-        <div className="container gridContainer">
-          <Filmcard/>
-          <Filmcard/>
-          <Filmcard/>
-          <Filmcard/>
-          <Filmcard/>
-          <Filmcard/>
-          <Filmcard/>
-          <Filmcard/>
-          <Filmcard/>
-          <Filmcard/>
-          <Filmcard/>
-          <Filmcard/>
-          <Filmcard/>
-          <Details/>
-        </div>
-      </main>
+    <div className="d-flex flex-column justify-content-between h-100">
+      {props.children}
       <Footer/>
-    </>
+    </div>
   )
 }
 

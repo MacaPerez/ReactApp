@@ -13,7 +13,7 @@ const Filmcard = props => {
       <p className="shortDescription display-less-1">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
   </div>
   <div className="cardLink-box">
-      <button type="button" title="Ver más información sobre esta película" className="btn card-link noBorder" data-toggle="modal" data-target=".bd-example-modal-lg">Más información</button>
+      <a hreff="" title="Ver más información sobre esta película" className="btn card-link noBorder" data-toggle="modal" data-target=".bd-example-modal-lg">Más información</a>
   </div>
 </div>
 </article>
