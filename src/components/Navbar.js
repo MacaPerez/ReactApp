@@ -36,7 +36,9 @@ class Navbar extends React.Component{
   <div className="collapse navbar-collapse" id="navbarSupportedContent">
     <ul className="navbar-nav mr-auto">
       <li className="nav-item active">
-        <a className="nav-link nav-link__custom" href="#" title="Ver películas más populares">Más populares<span className="sr-only">(current)</span></a>
+        <Link to="/popular" className="nav-link nav-link__custom" title="Ver películas más populares">
+        Más populares
+        </Link>
       </li>
       <li className="nav-item">
         <a className="nav-link nav-link__custom" href="#" title="Consultar información corporativa de UOC Flix">Sobre nosotros</a>

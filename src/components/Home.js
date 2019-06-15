@@ -55,8 +55,17 @@ render(){
       <>
         <Navbar/>
         <main className="mainContent">
-        <Header title="¡Bienvenid@ a UOC Flix!" 
-        subtitle="Una app para amantes del cine, críticos, gafa-pastas o gente como tú con tiempo libre y buen gusto"/>
+        <Header
+        title="¡Bienvenid@ a UOC Flix!"
+        subtitle="La app para amantes del cine, críticos, gafa-pastas o gente como tú con tiempo libre y buen gusto"
+        secondTitle="Estas son alguna de las películas mejor valoradas.."
+        emoji1="🎞️ "
+        altText1="Film frame"
+        emoji2="🍿 "
+        altText2="Popcorn box"
+        emoji3="🤓"
+        altText3="Nerd face"
+        />
           <div className="container gridContainer">
             {this.renderFilms()}
           </div>
@@ -66,6 +75,7 @@ render(){
   }
 
 }
+
 
 
 export default Home

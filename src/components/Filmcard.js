@@ -6,7 +6,7 @@ const Filmcard = props => {
   return (
 
 <article className="row no-gutters position-relative mb-3">
-  <div className="col-8 m-auto col-sm-6 mb-md-0 p-md-3 text-center">
+  <div className="col-8 col-sm-6 p-md-3 filmImage__container">
     <Link to={props.url}  title="Ver más información sobre esta película">
       <img src={props.mainImage} className="img-fluid filmImage" alt={props.alt} />
     </Link>
@@ -17,10 +17,10 @@ const Filmcard = props => {
         <h3 className="display6">{props.title}</h3>
       </Link>
       <p className="shortDescription display-less-1">{props.description}</p>
+      <span aria-label="hidden">...</span>
     </div>
   <div className="cardLink-box">
       <Link to={props.url} title="Ver más información sobre esta película" className="btn card-link noBorder">Más información</Link>
-
   </div>
 </div>
 </article>

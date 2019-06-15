@@ -92,8 +92,9 @@ render(){
 
     <nav className="nav p6 bgCustom--coldGradient">
         <span className="nav-item">
-            <Link to="/" className="nav-link active text-white" title="volver a la página anterior">
-              <i className="fa fa-arrow-left mr-3"></i>Volver
+            <Link to="/" className="nav-link active backLink" title="volver a la página anterior">
+              <i className="fa fa-arrow-left mr-3"></i>
+              Volver
             </Link>
         </span>
     </nav>
@@ -131,7 +132,7 @@ render(){
                         </div>
                     </div>
                     <div className="tab-pane fade mb-5" id="imagenes" role="tabpanel" aria-labelledby="imagenes-tab">
-                        <div className="scrolling-wrapper-flexbox">
+                        <div className="scrolling-wrapper-flexbox mt-4">
                           {this.renderImages()}
                         </div>
                     </div>

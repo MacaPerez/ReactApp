@@ -25,9 +25,17 @@ body {
   font-size: 1.3em;
 }
 
-
 .display-less-1 {
   font-size: .75em;
+}
+
+// Clases del header
+
+.secondTitleCustom {
+  text-align: left!important;
+  margin-bottom: 1.5rem;
+  font-size: 1.3em;
+  color: $info;
 }
 
 

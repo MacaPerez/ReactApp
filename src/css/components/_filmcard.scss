@@ -15,13 +15,9 @@
 
 
 .shortDescription {
-    display: block;
-    display: -webkit-box;
     height: 4rem;
     margin: 0 auto;
     line-height: 1.4;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -41,6 +37,11 @@
   color: $secondary;
 }
 
+.card-link:hover {
+  font-weight: 600;
+  color: $dark;
+}
+
 .noBorder:focus {
   box-shadow: none;
 }
@@ -52,6 +53,12 @@
 .cardLink-title:hover {
   text-decoration: none;
   color: $info!important;
+}
+
+.filmImage__container {
+  @media screen and (max-width: $break-small) {
+    margin: auto!important;  
+  }
 }
 
 .filmImage:hover {
