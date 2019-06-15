@@ -1,3 +1,11 @@
+/*------------------------------------*\
+  #GENERIC, COMMON STYLES
+\*------------------------------------*/
+
+
+
+
+
 html {
   height: 100%;
 }
@@ -15,7 +23,7 @@ body {
   font-size: 1.5em;
 }
 
-// Tamaños de letra
+// Common font sizes
 
 .display6 {
   font-size: 1.1em;
@@ -29,7 +37,23 @@ body {
   font-size: .75em;
 }
 
-// Clases del header
+
+// Custom background colors
+
+.bgCustom--coldGradient {
+  color: white;
+  background-color: $secondary;
+  background-image: linear-gradient(-303deg,#00a4bd,#00afb2 56%,#00bda5);
+}
+
+.bgCustom--hotGradient {
+  color: white;
+  background-color: $info;
+  background-image: linear-gradient(to top left,#ff8a00,#da1b60);
+}
+
+
+// Header styles
 
 .secondTitleCustom {
   text-align: left!important;
@@ -39,16 +63,31 @@ body {
 }
 
 
-// Grid listado
+// Filmcards grid
 
 .mainContent {
   margin: 2em 0;
 }
 
 .gridContainer {
+  display: table; //Para aquellos navegadores que no soportan grid
   display: grid;
   grid-gap: 15px;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+  img {
+    max-width: 250px; // Tamaño de imagen máximo para imágenes en navegadores que no soporten grid
+  }
+
+  //Declaraciones para las imágenes en navegadores que si soportan grid
+  @supports (display: grid) {
+
+      img {
+        width: 100%;
+        margin: auto;
+        text-align: center;
+      }
+  }
 }
 
 .loaderCentered {
@@ -65,16 +104,24 @@ body {
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
-// Color de fondo
+// Custom Scrollbar styles
 
-.bgCustom--coldGradient {
-  color: white;
-  background-color: $secondary;
-  background-image: linear-gradient(-303deg,#00a4bd,#00afb2 56%,#00bda5);
+/* width */
+::-webkit-scrollbar {
+  height:15px;
 }
 
-.bgCustom--hotGradient {
-  color: white;
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  box-shadow: inset 0 .5rem 1rem rgba(0,0,0,.25);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
   background-color: $info;
-  background-image: linear-gradient(to top left,#ff8a00,#da1b60);
+  background-image: linear-gradient(to bottom left,#ff8a00,#da1b60);
+  border-radius: 50px;
+  width:30%;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.55);
 }

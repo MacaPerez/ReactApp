@@ -1,5 +1,12 @@
-// Orden de los elementos del navbar
+/*------------------------------------*\
+  #NAVIGATION BAR STYLES
+\*------------------------------------*/
 
+
+
+
+
+// Elements visual order by device
 
 .navbar-brand {
   order: 1;
@@ -10,17 +17,24 @@
   }
 }
 
+.navbar-collapse {
+  order: 2;
+}
+
+// Logo and links styles
+
 .logo {
   width: 10rem;
+
   @media screen and (max-width: $break-small) {
     display: none;
   }
 }
 
-
 .imago {
   width: 2.5rem;
   display: none;
+
   @media screen and (max-width: $break-small) {
     display: block;
   }
@@ -44,9 +58,7 @@
   color: $dark!important;
 }
 
-.navbar-collapse {
-  order: 2;
-}
+// Toggler color and styles
 
 .navbar-light .navbar-toggler {
   color: white;
@@ -62,6 +74,8 @@
   flex: 1;
   justify-content: end;
 }
+
+// Search form styles
 
 .navBar__SearchInput {
     color: $dark;

@@ -25,7 +25,6 @@ componentDidMount(){
       loading: false
     })
   })
-
 }
 
 renderFilms() {
@@ -37,12 +36,12 @@ renderFilms() {
       const altText = "Imagen de portada de " + film.title
       const urlDetail = "/film-detail/" + film.id
       return <Filmcard
-      title={film.title}
-      description={film.overview}
-      mainImage={imgPath}
-      id={film.id}
-      alt={altText}
-      url={urlDetail}
+        title={film.title}
+        description={film.overview}
+        mainImage={imgPath}
+        id={film.id}
+        alt={altText}
+        url={urlDetail}
       />
 
     })
@@ -64,7 +63,6 @@ render(){
       </>
     )
   }
-
 }
 
 

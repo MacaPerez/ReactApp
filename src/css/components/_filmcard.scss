@@ -1,4 +1,12 @@
-// Columna de información
+/*------------------------------------*\
+  #FILMCARDS STYLES
+\*------------------------------------*/
+
+
+
+
+
+// Information column styles
 
 .infoCol {
   display: flex;
@@ -13,13 +21,12 @@
 }
 
 
-
 .shortDescription {
-    height: 4rem;
-    margin: 0 auto;
-    line-height: 1.4;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  height: 4rem;
+  margin: 0 auto;
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .cardLink-box {
@@ -55,9 +62,11 @@
   color: $info!important;
 }
 
+// Main image column styles
+
 .filmImage__container {
   @media screen and (max-width: $break-small) {
-    margin: auto!important;  
+    margin: auto!important;
   }
 }
 

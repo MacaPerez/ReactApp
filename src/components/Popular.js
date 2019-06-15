@@ -50,31 +50,29 @@ renderFilms() {
 }
 
 
-
-  render(){
-      return (
-        <>
-          <Navbar/>
-          <main className="mainContent">
+render(){
+    return (
+      <>
+        <Navbar/>
+        <main className="mainContent">
           <Header title="Más populares"
-          subtitle=""
-          secondTitle="Estas son las películas que más gustan a nuestros usuarios"
-          emoji1="🚀 "
-          altText1="Rocket"
-          emoji2="💥 "
-          altText2="Colission"
-          emoji3="👍"
-          altText3="Thumb up"
+            subtitle=""
+            secondTitle="Estas son las películas que más gustan a nuestros usuarios"
+            emoji1="🚀 "
+            altText1="Rocket"
+            emoji2="💥 "
+            altText2="Colission"
+            emoji3="👍"
+            altText3="Thumb up"
           />
-            <div className="container gridContainer">
-              {this.renderFilms()}
-            </div>
-          </main>
-        </>
-      )
-    }
-
+          <div className="container gridContainer">
+            {this.renderFilms()}
+          </div>
+      </main>
+      </>
+    )
   }
+}
 
 
 export default Popular

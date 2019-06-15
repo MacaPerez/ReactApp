@@ -15,7 +15,7 @@
 * Navigation bar............Custom navigation bar styles.
 * Footer..............Custom footer styles.
 * Film cards............Minimal cards.
-* Details pop-up........Product details modal.
+* Details view........Product details page.
 *
 */
 
@@ -51,7 +51,7 @@
 
 
 /*------------------------------------*\
-  #COMMON STYLES
+  #GENERIC, COMMON STYLES
 \*------------------------------------*/
 
 /**
@@ -75,13 +75,13 @@
 @import "components/navbar";
 
 /**
- * Import grid and cards from partial file
+ * Import cards styles from partial file
  */
 
 @import "components/filmcard";
 
 /**
- * Import details pop-up styles from partial file
+ * Import details styles from partial file
  */
 
 
