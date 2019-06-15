@@ -8,16 +8,15 @@
 
 
 .badge {
-  padding: 4px 10px;
-  margin-top: 6px;
+  padding: 4px 15px;
+  margin: 6px 6px 0 6px;
 }
 
-.nav-tabs.nav-item.show.nav-link, .nav-tabs.nav-link.active {
-  border: none!important;
-  border-bottom: 3px solid!important;
-  padding-right: 2em;
-  padding-left: 2em;
+.badgeCustom--padding {
+  padding: 18px 8.5px;
+  font-size: 1.3em;
 }
+
 
 
 .scrolling-wrapper-flexbox {
@@ -28,9 +27,10 @@
 
   .imgG {
     flex: 0 0 auto;
+    max-width: 150px;
   }
 }
 
-::-webkit-scrollbar {
-    display: none;
-}
+// ::-webkit-scrollbar {
+//     display: none;
+// }

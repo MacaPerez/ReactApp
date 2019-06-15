@@ -4,7 +4,7 @@ import Header from "./Header"
 import Filmcard from "./Filmcard"
 import Loader from "./Loader"
 
-class Home extends React.Component {
+class Search extends React.Component {
 
 constructor(){
   super()
@@ -15,7 +15,7 @@ constructor(){
 }
 
 componentDidMount(){
-  fetch("https://api.themoviedb.org/3/movie/top_rated?api_key=78d69b586b6f55809f16884ff99f42c1&language=es")
+  fetch("https://api.themoviedb.org/3/search/movie?api_key=78d69b586b6f55809f16884ff99f42c1&language=es&query=" + this.props.match.params.movie)
   .then((response) => {
     return response.json()
   })
@@ -30,7 +30,7 @@ componentDidMount(){
 
 renderFilms() {
   if (this.state.loading === true) {
-    return <Loader className="tex-center"/>
+    return <Loader/>
   } else {
     return this.state.films.map((film) => {
       const imgPath = "https://image.tmdb.org/t/p/w500" + film.poster_path
@@ -51,12 +51,12 @@ renderFilms() {
 
 
 render(){
+  const headerTitle = "Resultados de búsqueda por " + this.props.match.params.movie
     return (
       <>
         <Navbar/>
         <main className="mainContent">
-        <Header title="¡Bienvenid@ a UOC Flix!" 
-        subtitle="Una app para amantes del cine, críticos, gafa-pastas o gente como tú con tiempo libre y buen gusto"/>
+        <Header title={headerTitle}/>
           <div className="container gridContainer">
             {this.renderFilms()}
           </div>
@@ -68,4 +68,4 @@ render(){
 }
 
 
-export default Home
+export default Search

@@ -25,9 +25,6 @@ body {
   font-size: 1.3em;
 }
 
-.display10 {
-  font-size: 1.4em;
-}
 
 .display-less-1 {
   font-size: .75em;
@@ -46,6 +43,10 @@ body {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
+.loaderCentered {
+  grid-column: 1/-1;
+}
+
 // Formularios
 
 .form-control {
@@ -58,6 +59,14 @@ body {
 
 // Color de fondo
 
-.bgCustom {
+.bgCustom--coldGradient {
+  color: white;
+  background-color: $secondary;
   background-image: linear-gradient(-303deg,#00a4bd,#00afb2 56%,#00bda5);
+}
+
+.bgCustom--hotGradient {
+  color: white;
+  background-color: $info;
+  background-image: linear-gradient(to top left,#ff8a00,#da1b60);
 }
