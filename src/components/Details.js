@@ -42,7 +42,6 @@ getImageGallery(){
     return response.json()
   })
   .then((data) => {
-    console.log(data)
     this.setState({
       images: [
         ...data.backdrops,
