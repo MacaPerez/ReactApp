@@ -1,6 +1,6 @@
 import React from 'react'
-import Navbar from "./Navbar"
 import Header from "./Header"
+import {Link} from "react-router-dom"
 import Filmcard from "./Filmcard"
 import Loader from "./Loader"
 
@@ -53,7 +53,14 @@ render(){
   const headerTitle = "Resultados de búsqueda por " + this.props.match.params.movie
     return (
       <>
-        <Navbar/>
+        <nav className="nav p6 bgCustom--coldGradient">
+            <span className="nav-item">
+                <Link to="/" className="nav-link active backLink" title="volver a la página inicial">
+                  <i className="fa fa-arrow-left mr-3"></i>
+                  Home
+                </Link>
+            </span>
+        </nav>
         <main className="mainContent">
         <Header title={headerTitle}/>
           <div className="container gridContainer">

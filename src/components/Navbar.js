@@ -1,6 +1,6 @@
 import React from "react"
 import {Link} from "react-router-dom"
-
+import {Redirect} from "react-router-dom"
 class Navbar extends React.Component{
 
   constructor(){
@@ -12,7 +12,9 @@ class Navbar extends React.Component{
 
   handleSubmit(event){
     event.preventDefault()
-    window.location.replace("/search/" + this.state.movie)
+    this.setState({
+      redirect:   "/search/" + this.state.movie
+    })
   }
 
   handleChange(event){
@@ -24,7 +26,7 @@ class Navbar extends React.Component{
   render(){
     return (
       <nav className="navbar navbar-expand-md navbar-light bgCustom--coldGradient">
-
+        <Redirect to={this.state.redirect} />
         <Link to="/" className="navbar-brand" title="ir a la home">
           <img className="logo" src={process.env.PUBLIC_URL + '/static/img/logo2.png'} alt="Ir a la home. Logotipo caja de palomitas y texto UOC Flix"/>
           <img className="imago" src={process.env.PUBLIC_URL + '/static/img/imago.png'} alt="Ir a la home. Imagotipo caja de palomitas UOC Flix"/>
