@@ -1,7 +1,6 @@
 import React from "react"
-import Home from "./Home"
 import Footer from "./Footer"
-import Details from "./Details"
+
 
 const Layout = props => {
   return(
