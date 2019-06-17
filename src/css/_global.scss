@@ -23,7 +23,7 @@ body {
   font-size: 1.5em;
 }
 
-// Common font sizes
+// Common font sizes and font effects
 
 .display6 {
   font-size: 1.1em;
@@ -37,6 +37,13 @@ body {
   font-size: .75em;
 }
 
+.stokeText {
+   -webkit-text-stroke-width: 1.3px;
+   -webkit-text-stroke-color: $info;
+   -webkit-text-fill-color: white;
+   font-weight: 600;
+   font-size:  1.5em;
+}
 
 // Custom background colors
 
@@ -80,6 +87,7 @@ body {
   }
 
   //Declaraciones para las imágenes en navegadores que si soportan grid
+
   @supports (display: grid) {
 
       img {

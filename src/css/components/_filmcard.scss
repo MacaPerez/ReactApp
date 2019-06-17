@@ -47,6 +47,7 @@
 .card-link:hover {
   font-weight: 600;
   color: $dark;
+  text-shadow: 0 .5rem 1rem rgba(0,0,0,.25);
 }
 
 .noBorder:focus {
